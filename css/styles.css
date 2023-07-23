@@ -1,0 +1,189 @@
+/* Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Montserrat:wght@300&display=swap');
+
+/* Reset */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth; /* Para que el scrolleo en la one page sea suave */
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+    font-size: 18px;
+    line-height: 1.2;
+    background-color: #fbfbfb;
+    color: #0f0f0f;
+}
+
+h1 {
+    font-size: 36px;
+    text-align: center;
+}
+
+h2 {
+    font-size: 28px;
+}
+
+p {
+    margin: 16px 0;
+}
+
+img {
+    max-width: 100%;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px;
+    height: 90px;
+    width: 100%;
+    background-color: #fbfbfb;
+    position: fixed; /*Propiedad para que quede fijo en la ventana*/
+    top: 0;
+    left: 0;
+    box-shadow: 0 3px 10px -5px #5f5f5f;
+}
+
+ul#menu {
+    display: flex;
+    font-size: 20px;
+}
+
+li.menu-item a{
+    padding: 16px;
+    display: inline-block;
+}
+
+/* Para quitar los puntos a los items de listas */
+ul {
+    list-style: none;
+}
+
+/* Para que los enlaces hereden el color de texto y no tengan subrayado */
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Este max-width es para que el contenido no se "estire" demasiado hacia los costados y
+  el margin: auto; para tenerlo centrado fácilmente */
+main {
+    max-width: 1200px;
+    margin: auto;
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 16px;
+    min-height: 100vh;
+    padding-top: 120px;
+}
+
+section#inicio {
+    justify-content: space-around;
+}
+
+figure.presentacion-img {
+    margin-bottom: 20px;
+}
+
+figure.presentacion-img img {
+    border-radius: 50%;
+    width: 400px;
+    height: 400px;
+    object-fit: cover;
+}
+
+article.presentacion {
+    width: 100%;
+    text-align: center;
+}
+
+a.boton {
+    background-color: #af599e;
+    color: #fbfbfb;
+    padding: 12px 20px;
+    border-radius: 50px;
+    font-size: 20px;
+    display: inline-block;
+}
+
+article.hablemos {
+    justify-content: space-around;
+    background-color: rgba(175, 89, 158, 0.3);
+    color: #0f0f0f;
+    text-align: center;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.iconos {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 100%;
+    width: 15em;
+    height: 15em;
+    gap: 5%;
+}
+
+footer{
+    background-color: #af599e;
+    color: #fbfbfb;
+    margin-bottom: 0;
+    height: 90px;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+footer button#change-font {
+    background-color: transparent;
+    color: white;
+    border: 1px solid white;
+    padding: 5px 10px;
+    margin-bottom: 10px;
+}
+
+/*permite que el boton y el menu tenga transicion al pasar el mouse*/
+li.menu-item:hover,
+li.menu-item a.active,
+a.boton:hover {
+    background:rgba(175, 89, 158, 0.3);
+    transition: background-color 0.3s;
+}
+
+/*desktop*/
+@media (min-width: 1024px){
+    h1{
+        font-size: 48px;
+        text-align: left;
+    }
+    h2 {
+        font-size: 32px;
+    }
+    section#inicio {
+        flex-direction: row;
+    }
+    article.presentacion {
+        width: 50%;
+        text-align: left;
+    }
+    ul#contacto-links li {
+        margin: 32px;
+    }
+}
+
+body.change-font {
+    font-family: 'Courier New', Courier, monospace;
+}
